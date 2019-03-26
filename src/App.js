@@ -1,45 +1,40 @@
 import React, { Component } from 'react';
 import './App.css';
-import coin from './coin.svg';
+// import coin from './coin.svg';
 
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //       isLoading: false, 
-  //       quarter: 'heads',
-  //       // url: google.com,//pic of image head
-  //   }
+  constructor(props) {
+    super(props);
+    this.state = {
+        display: 'Click Me To Show Heads or Tails'
+    }
+    this.coinToss = this.coinToss.bind(this);
+  }
 
-  // }
-
-  // //FIXME: make sure quarter populates to random heads or tails
-  // coinToss () {
-  //   // This function will randomly return either 'heads' or 'tails'.
-  //   return Math.random() < 0.5 ? 'heads' : 'tails';
+  // componentDidMount() {
   //   this.setState = {
-  //     isLoading: true,
-  //     quarter: 'tails'
+  //     result: this.coinToss
   //   }
   // }
-
-  //TODO: need to drop this inside a function that can be referenced by an onClick event for flip button
-  // // if/else statement begins here:
-  // if (coinToss() == "heads") {
-  //   var img = <img src={pics.kitty} />;
-  // } else {
-  //   var img = <img src={pics.doggy} />;
-  // }
-
+  
+  coinToss(){
+    let coin = ['heads','tails']
+    let toss = Math.floor(Math.random() * 2) //randomly access indexes 0 to 1
+    // console.log(toss)//printing index randomly as expected to console
+    return document.getElementById('resultText').innerHTML=coin[toss]
+    //printing coin sides randomly to console as expected
+  }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-        <img src={coin} className="App-logo" alt="logo" />
-        {/* <p>quarter needs to be according to state</p>
-          <button onClick={this.coinToss}>Flip Coin</button> */}
+        <p>{this.state.display}</p>
+        <p id='resultText'>{this.setState.result}</p>
+        {/* <img src={coin} className="App-logo" alt="logo" /> */}
+        {/* <p>quarter needs to be according to state</p>*/}
+          <button onClick={this.coinToss}>Flip Coin</button> 
         </header>
       </div>
     );
