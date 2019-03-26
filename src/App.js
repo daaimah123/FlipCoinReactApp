@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import coin from './coin.svg';
+
 
 class App extends Component {
   // constructor(props) {
@@ -35,6 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <img src={coin} className="App-logo" alt="logo" />
         {/* <p>quarter needs to be according to state</p>
           <button onClick={this.coinToss}>Flip Coin</button> */}
         </header>
