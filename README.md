@@ -14,4 +14,15 @@ In the project directory, my objective was to create an app that was able to ren
 6. Create a function that goes inside click event that handles toggle between heads and tails 
 7. Button does not disable
 
+### Progression
 
+Was able to load results to console, not to page. 
+
+![Screen Shot 2019-03-26 at 3 10 50 PM](https://user-images.githubusercontent.com/41805952/55126714-1a386f00-50cb-11e9-8853-f16669d35e7c.png)
+
+Attempted use of `document.getElementById` to force text rendering to page. Toggle successful.
+
+![Screen Shot 2019-03-26 at 3 34 05 PM](https://user-images.githubusercontent.com/41805952/55126784-566bcf80-50cb-11e9-9a98-9b250b4ea13f.png)
+
+Progression from text toggle to image toggle with a star wars api request on planet id.
+![Heads & Tails to Image](https://media.giphy.com/media/3GBOFz3HTbnvP2mOx2/giphy.gif)
