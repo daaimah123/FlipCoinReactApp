@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-#resultText {
+#resultText, #starWars {
   color: white;
 }
 /* .App-logo {

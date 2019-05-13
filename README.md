@@ -1,3 +1,9 @@
+
+![Heads & Tails to Image](FlipCoin.gif)
+
+
+---------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## HTML, REACT
@@ -24,5 +30,3 @@ Attempted use of `document.getElementById` to force text rendering to page. Togg
 
 ![Screen Shot 2019-03-26 at 3 34 05 PM](https://user-images.githubusercontent.com/41805952/55126784-566bcf80-50cb-11e9-9a98-9b250b4ea13f.png)
 
-Progression from text toggle to image toggle with a star wars api request on planet id.
-![Heads & Tails to Image](https://media.giphy.com/media/3GBOFz3HTbnvP2mOx2/giphy.gif)
