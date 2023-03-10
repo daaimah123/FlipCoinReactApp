@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style.css';
 // var request = require('request');
-
 
 // var FetchStream = require("fetch").FetchStream;
 
 // import coin from './coin.svg';
-
 
 class App extends Component {
   constructor(props) {
@@ -15,15 +13,13 @@ class App extends Component {
       coinPic: '',
       display: 'Click Me To Show Heads or Tails',
       external: {}, //empty obj to state that there will be obj data eventually
-
     }
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.starWarsAPI = this.starWarsAPI.bind(this);
-    this.coinToss = this.coinToss.bind(this);
-
+    // this.handleTextChange = this.handleTextChange.bind(this);
+    // this.starWarsAPI = this.starWarsAPI.bind(this);
+    // this.coinToss = this.coinToss.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.setState ({
       coin: this.coinToss,
       value: ''
@@ -31,13 +27,13 @@ class App extends Component {
   }
 
   //will handle input text from textbox
-  handleTextChange(input) {
+  handleTextChange = (input) => {
     this.setState(
       {value: input.target.value} //id number typed into value box 
       );
   }
 
-  starWarsAPI(){//id established for when input is saved and used to return id planet
+  starWarsAPI = () => {//id established for when input is saved and used to return id planet
     fetch(`https://swapi.co/api/planets/${this.state.value}`)
     .then(res => res.json())
     .then(body => {
@@ -52,10 +48,8 @@ class App extends Component {
     //   document.getElementById('starWars').innerHTML=body; //SUCCESS: Printing to page as expected
     //   console.log(`this: ${this}`)
     //   this.setState({external: body})
-      
     // });
   }
-
 
 //TODO: change head and tail string into words
 // head image
@@ -104,7 +98,5 @@ class App extends Component {
     );
   }
 }
-
-
 
 export default App;
